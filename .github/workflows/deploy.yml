@@ -20,7 +20,7 @@
             channel: 'stable'
 
         - run: flutter pub get
-        - run: flutter build web --release --base-href "/bytenote/"
+        - run: flutter build web --release --base-href "/ByteNote/"
         - name: Deploy to Github Pages
           uses: peaceiris/actions-gh-pages@v3
           with:
