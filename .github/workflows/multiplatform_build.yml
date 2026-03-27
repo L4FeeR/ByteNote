@@ -54,6 +54,9 @@ jobs:
 
       - name: Build Application
         run: |
+          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" > .env
+          echo "SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}" >> .env
+
           if [ "${{ matrix.target }}" == "android" ]; then
             flutter build apk --release
           elif [ "${{ matrix.target }}" == "windows" ]; then
